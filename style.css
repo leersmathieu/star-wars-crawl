@@ -1,0 +1,107 @@
+/* body {
+    
+    background-image: url("star.jpg")
+} */
+
+.intro {
+     
+    margin: auto;
+    font-family: sans-serif;
+    color: black;
+    font-size: 2vw;
+    animation-name: intro;
+    animation-duration: 7s;
+    padding-bottom: 30px;
+    
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  overflow: hidden;
+}
+
+.page {
+  position: relative;
+  width: 100%;
+  min-height: 60vh;
+  top: -25px;
+  background-image: linear-gradient(0deg, transparent, black 75%);
+  
+}
+
+.star-wars {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 100vh;
+  color: #feda4a;
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 600%;
+  font-weight: 600;
+  letter-spacing: 6px;
+  line-height: 150%;
+  perspective: 400px;
+  text-align: justify;
+}
+
+.crawl {
+  position: relative;
+  top: 9999px;
+  transform-origin: 50% 100%;
+  animation: crawl 30s linear;
+  animation-delay: 1s;
+  ;
+}
+
+.crawl > .title {
+  font-size: 90%;
+  text-align: center;
+}
+
+.crawl > .title h1 {
+  margin: 0 0 100px;
+  text-transform: uppercase;
+}
+
+@keyframes crawl {
+  0% {
+    top: 0;
+    transform: rotateX(20deg)  translateZ(0);
+  }
+  100% { 
+    top: -6000px;
+    transform: rotateX(25deg) translateZ(-2500px);
+  }
+}
+
+@keyframes intro {
+    0% {
+        opacity: 0;
+        color: #000;
+    }
+    25% {
+            width: 55vw;
+            height: 15vh;
+            margin-top: 30vh;
+    }
+
+    50% {opacity: 1;
+        color: rgb(130, 204, 223);
+        width: 55vw;
+        height: 15vh;
+    }
+95% {
+        width: 55vw;
+        height: 15vh;
+        margin-top: 30vh;
+        color: black;
+}
+
+    100% {opacity: 0;
+        color: black;
+        width: 0vw;
+        height: 0vh;
+    }
+}
