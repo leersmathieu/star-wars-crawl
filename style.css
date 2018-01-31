@@ -1,25 +1,12 @@
-/* body {
-    
-    background-image: url("star.jpg")
-} */
-
-.intro {
-     
-    margin: auto;
-    font-family: sans-serif;
-    color: black;
-    font-size: 2vw;
-    animation-name: intro;
-    animation-duration: 7s;
-    padding-bottom: 30px;
-    
-}
-
 body {
   width: 100%;
   height: 100%;
   background: #000;
   overflow: hidden;
+  background-image: url("star.jpg");
+  background-repeat: no-repeat;
+  background-position:top center;
+  animation: backgr 10s;
 }
 
 .page {
@@ -27,8 +14,19 @@ body {
   width: 100%;
   min-height: 60vh;
   top: -25px;
-  background-image: linear-gradient(0deg, transparent, black 75%);
   
+  
+}
+
+.intro {
+     
+  margin: auto;
+  font-family: sans-serif;
+  color: black;
+  font-size: 2vw;
+  animation: intro 7s linear 2s;
+  padding-bottom: 30px;
+    
 }
 
 .star-wars {
@@ -51,7 +49,7 @@ body {
   top: 9999px;
   transform-origin: 50% 100%;
   animation: crawl 30s linear;
-  animation-delay: 1s;
+  animation-delay: 10s;
   ;
 }
 
@@ -70,9 +68,14 @@ body {
     top: 0;
     transform: rotateX(20deg)  translateZ(0);
   }
+
+  90% {
+    opacity: 1;
+  }
   100% { 
-    top: -6000px;
-    transform: rotateX(25deg) translateZ(-2500px);
+    top: -8000px;
+    transform: rotateX(18deg) translateZ(-2500px);
+    opacity: 0;
   }
 }
 
@@ -80,11 +83,9 @@ body {
     0% {
         opacity: 0;
         color: #000;
-    }
-    25% {
-            width: 55vw;
-            height: 15vh;
-            margin-top: 30vh;
+        width: 55vw;
+        height: 15vh;
+        margin-top: 30vh;
     }
 
     50% {opacity: 1;
@@ -92,7 +93,7 @@ body {
         width: 55vw;
         height: 15vh;
     }
-95% {
+    95% {
         width: 55vw;
         height: 15vh;
         margin-top: 30vh;
@@ -104,4 +105,15 @@ body {
         width: 0vw;
         height: 0vh;
     }
+}
+
+@keyframes backgr {
+    0% {background-color: #000;
+        background-image: none;
+    }
+    100%{background-color: #000;
+        background-image: none;
+    }
+    
+      
 }
