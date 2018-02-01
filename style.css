@@ -29,6 +29,19 @@ body {
     
 }
 
+.becode {
+
+  margin: auto;
+  font-family: sans-serif;
+  color: black;
+  font-size: 2vh;
+  animation: becode 8s ease-out 10s;
+  position: fixed;
+  
+  
+  
+}
+
 .star-wars {
   display: flex;
   justify-content: center;
@@ -36,7 +49,7 @@ body {
   height: 100vh;
   color: #feda4a;
   font-family: 'Pathway Gothic One', sans-serif;
-  font-size: 600%;
+  font-size: 700%;
   font-weight: 600;
   letter-spacing: 6px;
   line-height: 150%;
@@ -48,8 +61,8 @@ body {
   position: relative;
   top: 9999px;
   transform-origin: 50% 100%;
-  animation: crawl 30s linear;
-  animation-delay: 10s;
+  animation: crawl 30s linear 18s;
+  
   ;
 }
 
@@ -63,20 +76,15 @@ body {
   text-transform: uppercase;
 }
 
-@keyframes crawl {
-  0% {
-    top: 0;
-    transform: rotateX(20deg)  translateZ(0);
-  }
-
-  90% {
-    opacity: 1;
-  }
-  100% { 
-    top: -8000px;
-    transform: rotateX(18deg) translateZ(-2500px);
-    opacity: 0;
-  }
+@keyframes backgr {
+    0% {background-color: #000;
+        background-image: none;
+    }
+    100%{background-color: #000;
+        background-image: none;
+    }
+    
+      
 }
 
 @keyframes intro {
@@ -107,13 +115,54 @@ body {
     }
 }
 
-@keyframes backgr {
-    0% {background-color: #000;
-        background-image: none;
+@keyframes becode {
+    0% {
+        opacity: 1;
+        color: #000;
+        width: 100vw;
+        height: 80vh;
+        margin-top: 30vh;
+        text-shadow:2px 0 0 #feda4a, -2px 0 0 #feda4a, 0 2px 0 #feda4a, 
+                    0 -2px 0 #feda4a, 1px 1px #feda4a, -1px -1px 0 #feda4a, 
+                    1px -1px 0 #feda4a, -1px 1px 0 #feda4a;
+        font-size: 1700%;
+        text-align: center;
     }
-    100%{background-color: #000;
-        background-image: none;
+
+
+    95% {
+        width: 100vw;
+        height: 80vh;
+        margin-top:30vh;
+        color: black;
+        font-size: 20%;
+        opacity: 1;
+        text-align: center;
+}
+    100% {
+        opacity: 0;
+        width: 100vw;
+        height: 80vh;
+        margin-top: 0vh;
     }
+
     
-      
+}
+
+
+
+@keyframes crawl {
+  0% {
+    top: 0;
+    transform: rotateX(20deg)  translateZ(0);
+  }
+
+  90% {
+    opacity: 1;
+  }
+  100% { 
+    top: -8000px;
+    transform: rotateX(18deg) translateZ(-2500px);
+    opacity: 0;
+  }
 }
